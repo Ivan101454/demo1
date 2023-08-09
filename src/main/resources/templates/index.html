@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BarrierFree</title>
+</head>
+
+<body>
+<h2>Barrier-Free Solutions</h2>
+
+<table>
+  <tr>
+    <th><a href="/home/new">Новости</a></th>
+    <th><a href="/home/cataloge">Справочник</a></th>
+    <th><a href="/home/solutions">Решения</a></th>
+    <th><a href="/home/more">Новости</a></th>
+    <th>
+        <form th:action="@{/home/find}" th:object="${q}" method="post">
+            <label for="find">Найти</label>
+            <input type="text" id="find"/>
+            <button type="submit">Найти</button>
+        </form>
+    </th>
+  </tr>
+</table>
+
+<table th:border="0">
+   <tr>
+       <th><a href="/home/main">Главное</a></th>
+       <th><a href="/home/peoples">Люди</a></th>
+       <th><a href="/home/events">События</a></th>
+       <th><a href="/home/rehabilitation">Реабилитация</a></th>
+       <th><a href="/home/expertise">Экспертиза</a></th>
+       <th><a href="/home/media">Медиа</a></th>
+       <th><a href="/home/experience">Личный опыт</a></th>
+   </tr>
+</table>
+<table th:border="0">
+    <tr>
+        <th><h2>Новости</h2></th>
+        <th> <a href="/home/news">Смотреть все новости</a></th>
+    </tr>
+
+</table>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <title>New City</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div align="center">
+    <h1>Добавление нового города</h1>
+    <br/>
+    <form action="#" th:action="@{/home/save}" th:object="${city}" method="post">
+        <table border="0" cellpadding="10">
+            <tr>
+                <td><label for="name">Город</label> </td>
+                <td><input type="text" id="name" name="name"/></td>
+            </tr>
+            <tr>
+                <td> </td><label for="description">Информация</label> </td>
+                <td><textarea type="text" id="description" name="description" rows="3"> </textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">Сохранить</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <h3><a href="/home/city">назад</a></h3>
+</div>
+</body>
+</html>
